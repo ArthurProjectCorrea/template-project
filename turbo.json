@@ -7,6 +7,11 @@
     "api#dev": {},
     "api#lint": {},
     "api#test": {},
+    "docs#build": {
+      "outputs": ["apps/docs/build/**"]
+    },
+    "docs#dev": {},
+    "docs#lint": {},
     "//#format-and-lint": {},
     "//#format-and-lint:fix": {
       "cache": false
