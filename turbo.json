@@ -1,8 +1,33 @@
 {
   "$schema": "https://turborepo.com/schema.json",
-  "ui": "tui",
   "tasks": {
-    "test": {},
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "apps/docs/build/**",
+        "!**/.next/cache/**"
+      ],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "outputs": ["coverage/**"]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
     "api#build": {},
     "api#dev": {},
     "api#lint": {},
@@ -12,28 +37,27 @@
     },
     "docs#dev": {},
     "docs#lint": {},
-    "//#format-and-lint": {},
-    "//#format-and-lint:fix": {
-      "cache": false
+    "web#build": {
+      "outputs": ["apps/web/.next/**"]
     },
-    "test:watch": {
+    "web#dev": {
       "cache": false,
       "persistent": true
     },
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    "web#lint": {},
+    "web#test": {},
+    "ui#build:components": {
+      "outputs": ["packages/ui/dist/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
+    "ui#build:styles": {
+      "outputs": ["packages/ui/dist/index.css"]
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
+    "ui#test": {},
+    "ui#lint": {},
+    "format": {
+      "outputs": []
     }
-  }
+  },
+  "globalDependencies": ["package.json", "pnpm-lock.yaml", "turbo.json"],
+  "ui": "tui"
 }

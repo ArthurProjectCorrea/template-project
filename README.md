@@ -101,6 +101,7 @@ pnpm dev
    ```
 
 ### Como criar um novo componente UI compartilhado
+
 1. Crie o arquivo do componente em `packages/ui/src/components/ui/NomeDoComponente.tsx`.
 2. Exporte no `packages/ui/src/index.ts`:
    ```ts
@@ -111,6 +112,7 @@ pnpm dev
 ---
 
 ## Como criar uma nova página no Next.js (web)
+
 1. Crie um arquivo em `apps/web/app/nome-da-pagina/page.tsx`.
 2. Exemplo:
    ```tsx
@@ -123,6 +125,7 @@ pnpm dev
 ---
 
 ## Como usar shadcn/ui
+
 - O pacote `@repo/ui` já está preparado para receber componentes shadcn/ui.
 - Para criar um novo componente shadcn/ui compartilhado:
   1. Copie o componente do [shadcn/ui](https://ui.shadcn.com/docs/components) para `packages/ui/src/components/ui/`.
@@ -133,6 +136,7 @@ pnpm dev
 ---
 
 ## Boas práticas
+
 - Sempre exporte componentes compartilhados no `index.ts` do pacote ui.
 - Prefira criar componentes globais em `@repo/ui` para reuso entre apps.
 - Use o Tailwind compartilhado para manter o design consistente.
@@ -141,6 +145,7 @@ pnpm dev
 ---
 
 ## Outras dicas
+
 - Para adicionar dependências em um pacote específico: `pnpm add pacote --filter=nome-do-pacote`
 - Para rodar apenas um app: `pnpm dev --filter=web`
 - Para rodar testes: `pnpm test --filter=web` ou `pnpm test --filter=@repo/ui`
@@ -148,6 +153,7 @@ pnpm dev
 ---
 
 ## Documentação dos principais comandos
+
 - `pnpm dev` - inicia todos os apps em modo dev
 - `pnpm build` - builda todos os apps/pacotes
 - `pnpm lint` - roda o lint em todos os pacotes
@@ -156,6 +162,7 @@ pnpm dev
 ---
 
 ## Links úteis
+
 - [Turborepo Docs](https://turbo.build/repo/docs)
 - [Next.js Docs](https://nextjs.org/docs)
 - [shadcn/ui Docs](https://ui.shadcn.com/docs)

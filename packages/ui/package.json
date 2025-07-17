@@ -21,7 +21,8 @@
     "dev:components": "tsc --watch",
     "lint": "eslint src --max-warnings 0",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "format": "prettier --write ."
   },
   "peerDependencies": {
     "react": "^19"
