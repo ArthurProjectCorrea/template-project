@@ -54,6 +54,9 @@
     "ui#build:styles": {
       "outputs": ["packages/ui/dist/index.css"]
     },
+    "ui#build": {
+      "dependsOn": ["ui#build:styles", "ui#build:components"]
+    },
     "ui#test": {},
     "ui#test:coverage": {},
     "ui#lint": {},

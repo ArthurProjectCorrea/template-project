@@ -19,6 +19,8 @@ jobs:
         uses: pnpm/action-setup@v3
         with:
           version: 8
+      - name: Clean pnpm store (cache)
+        run: pnpm store prune || echo 'pnpm store prune não disponível'
       - name: Install dependencies
         run: pnpm install
       - name: Lint
@@ -27,5 +29,14 @@ jobs:
         run: pnpm test
       - name: Build
         run: pnpm build
+      - name: Verificar @repo/ui/card em node_modules
+        run: |
+          ls -lR node_modules/@repo/ui || echo '@repo/ui não encontrado em node_modules'
+          ls -lR node_modules/@repo/ui/dist || echo 'dist não encontrado em node_modules/@repo/ui'
+          ls -lR packages/ui/dist || echo 'dist local não encontrado'
+      - name: List @repo/ui build outputs
+        run: |
+          ls -lR node_modules/@repo/ui/dist || echo 'dist não encontrado'
+          ls -lR packages/ui/dist || echo 'dist local não encontrado'
       - name: Coverage
         run: pnpm test:coverage || echo 'No coverage script'

@@ -1,5 +1,5 @@
+import { Card } from "@repo/ui";
 import Image from "next/image";
-import { Card } from "@repo/ui/card";
 
 const LINKS = [
   {
@@ -56,14 +56,7 @@ export default function Page() {
       <div className="relative flex place-items-center ">
         <div className="font-sans w-auto pb-16 pt-[48px] md:pb-24 lg:pb-32 md:pt-16 lg:pt-20 flex justify-between gap-8 items-center flex-col relative z-0">
           <div className="z-50 flex items-center justify-center w-full">
-            <div className="absolute min-w-[614px] min-h-[614px]">
-              <Image
-                alt="Turborepo"
-                height={614}
-                src="circles.svg"
-                width={614}
-              />
-            </div>
+            <div className="absolute min-w-[614px] min-h-[614px]"></div>
             {/* Removido Gradient e TurborepoLogo */}
           </div>
           {/* Removido Gradient */}
