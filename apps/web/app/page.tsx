@@ -60,7 +60,7 @@ export default function Page() {
               <Image
                 alt="Turborepo"
                 height={614}
-                src="circles.svg"
+                src="/circles.svg"
                 width={614}
               />
             </div>
