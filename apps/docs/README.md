@@ -1,41 +1,30 @@
-# Website
+# Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Documentação do monorepo, construída com Docusaurus, centralizando informações técnicas, guias e tutoriais.
 
-## Installation
+## Propósito
 
-```bash
-yarn
-```
+- Facilitar o onboarding de novos desenvolvedores
+- Centralizar documentação de APIs, UI e processos
+- Disponibilizar tutoriais e exemplos de uso
 
-## Local Development
+## Principais Recursos
 
-```bash
-yarn start
-```
+- Estrutura modular de documentação
+- Suporte a blog, tutoriais e guias
+- Geração de site estático para fácil acesso
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+## Como executar
 
 ```bash
-yarn build
+pnpm install
+pnpm start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Acesse: http://localhost:3002
 
-## Deployment
+---
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+> Este projeto é a principal fonte de documentação para todos os pacotes e aplicações do monorepo.
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
