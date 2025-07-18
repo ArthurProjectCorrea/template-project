@@ -2,129 +2,134 @@
 applyTo: "apps/docs/**"
 ---
 
+## 📚 Diretrizes Oficiais de Documentação do Monorepo
 
-## Instruções de Documentação para o Monorepo
-
-Cada projeto do monorepo deve ser documentado de acordo com suas características e necessidades específicas, sempre refletindo o estado real do código. Siga o fluxo e as diretrizes abaixo para garantir documentação enxuta, útil e padronizada.
+Estas instruções definem o padrão **único e obrigatório** para a geração e manutenção da documentação técnica em Markdown no monorepo. Toda documentação **deve refletir exatamente o que está implementado** e seguir uma estrutura coesa, enxuta e voltada para desenvolvedores.
 
 ---
-### FLUXO PADRÃO PARA DOCUMENTAÇÃO E REVISÃO (OBRIGATÓRIO)
-0. **Mapeamento da Estrutura:**
-   - Antes de qualquer ação, observe e liste toda a estrutura de arquivos e pastas em `apps/docs/docs` e subdiretórios.
-   - Utilize essa análise para garantir que a documentação reflita exatamente o que está implementado e para identificar tópicos/documentos desnecessários.
 
+### ✅ Fluxo Geral (Obrigatório para todos os agentes e colaboradores)
 
-O agente responsável pela documentação DEVE seguir SEMPRE o fluxo abaixo, de forma proativa, automática e sem exceções:
+O agente de documentação deve seguir **sempre** as etapas abaixo, de forma **autônoma**, **proativa** e **sem exceções**:
 
-1. **Ordem obrigatória:** documentar e revisar primeiro a API (`apps/api`), depois o frontend web (`apps/web`), em seguida o pacote de UI (`packages/ui`) e por último o monorepo/Turborepo.
-2. **Análise real do projeto:** antes de criar, atualizar ou remover qualquer documentação, analise o código e a estrutura real de cada projeto para identificar o que está implementado, quais fluxos existem, quais arquivos são relevantes e quais integrações estão presentes.
-3. **Remoção de arquivos/documentação desnecessária:**
-   - Consulte TODO o diretório `apps/docs/docs/` e SUBDIRETÓRIOS.
-   - Remova arquivos/tópicos/documentações que não tenham relevância ou não estejam implementados (ex: não crie ou mantenha arquivo de auth se não há autenticação implementada).
-   - A REMOÇÃO DEVE SER FEITA OBRIGATORIAMENTE VIA TERMINAL, utilizando comandos apropriados para o sistema operacional (ex: `Remove-Item` no PowerShell do Windows).
-   - Certifique-se de que nenhum arquivo/documentação desnecessária permaneça após a revisão.
-   - Não ignore arquivos vazios, exemplos fictícios ou tópicos não implementados: tudo deve ser removido se não houver implementação real correspondente.
-4. **Criação/atualização de arquivos:** crie ou atualize arquivos de documentação apenas para tópicos que realmente existem e são relevantes, sempre seguindo o padrão de separação de arquivos já adotado (um arquivo por tópico, ex: `overview.md`, `usage.md`, `structure.md`, etc).
-5. **Sidebar:** mantenha o arquivo `sidebars.ts` sempre atualizado, listando explicitamente cada arquivo relevante na ordem correta.
-6. **Padronização:** utilize títulos hierárquicos, blocos de código, tabelas, listas, avisos e exemplos reais do código, conforme as diretrizes deste documento. Nunca inclua exemplos, fluxos, endpoints ou integrações fictícias.
-7. **Revisão final:**
-   - Garanta que toda a documentação esteja atualizada, sem duplicidade, fácil de navegar, com sumário e links internos claros.
-   - Revise minuciosamente TODOS os arquivos em `apps/docs/docs/` e subdiretórios, removendo qualquer item que não reflita o estado real do projeto.
-   - Certifique-se de que a sidebar (`sidebars.ts`) não referencie arquivos inexistentes ou tópicos não implementados.
-   - NADA deve ser ignorado: a documentação deve ser enxuta, útil, organizada e SEMPRE refletir o que está implementado.
+1. **Mapeamento inicial**
+   - Liste e revise a estrutura de arquivos existente em `apps/docs/docs/` e subdiretórios.
+   - Use essa visão para alinhar os tópicos com o que está de fato implementado.
 
-9. **Revisão dos README.md:** revise todos os arquivos `README.md` dos projetos (apps e packages), garantindo que estejam atualizados, reflitam o resumo real do projeto correspondente e estejam alinhados com a documentação técnica.
+2. **Ordem de documentação obrigatória**
+   Documente os projetos na seguinte ordem:
+   1. `apps/api`
+   2. `apps/web`
+   3. `packages/ui`
+   4. Estrutura do monorepo (`apps`, `packages`, `turborepo`)
 
-> O agente deve agir SEMPRE de forma autônoma, sem pedir permissão, garantindo documentação enxuta, útil, organizada e baseada no que está implementado.
+3. **Análise real do código antes de escrever**
+   - Revise a estrutura, implementações e fluxos reais de cada projeto.
+   - Só documente aquilo que **existe de fato**.
+
+4. **Remoção de arquivos/documentação inválida ou desnecessária**
+   - Apague arquivos que estejam vazios, duplicados, obsoletos ou irrelevantes.
+   - Isso inclui exemplos fictícios, fluxos inexistentes, endpoints não implementados etc.
+   - Use comandos apropriados no terminal (ex: `rm`, `Remove-Item`) para deletar os arquivos.
+
+5. **Criação/atualização de arquivos válidos**
+   - Documente apenas o que está presente no código.
+   - Mantenha a separação por tópicos (ex: `overview.md`, `usage.md`, `routes.md`).
+
+6. **Atualização da Sidebar**
+   - Mantenha o `sidebars.ts` sincronizado com os arquivos `.md` válidos, na ordem correta.
+
+7. **Padrão de formatação obrigatória**
+   - Use títulos hierárquicos (`#`, `##`, `###`).
+   - Utilize blocos de código com sintaxe (`ts`, `json`, `bash` etc).
+   - Use tabelas, listas e blocos de aviso (`:::tip`, `:::warning` etc).
+   - Utilize imagens ou diagramas reais, colocados em `docs/static/img`.
+   - **Nunca crie conteúdo fictício.**
+
+8. **Revisão final e validação**
+   - Navegue por todo o conteúdo gerado para validar clareza, estrutura, links internos e consistência com o código.
+   - Verifique se a sidebar está limpa e funcional.
+   - Elimine qualquer item redundante ou desatualizado.
+
+9. **Atualização dos `README.md` dos projetos**
+   - Todos os apps e packages devem ter README atualizados e alinhados com os conteúdos da documentação.
+
 ---
 
+> O agente deve atuar **autonomamente**, sempre garantindo uma documentação **realista**, **útil**, **organizada** e **focada no que está implementado**.
 
-### 1. API (apps/api)
+---
 
-**Objetivo:** Documentar o backend do monorepo, desenvolvido em NestJS, para uso por desenvolvedores internos.
+## 📦 Instruções Específicas por Projeto
 
-**Diretrizes:**
-- Utilize o frontmatter YAML no início de cada arquivo `.md` para definir propriedades extras (opcional com sidebar manual).
-- Use títulos hierárquicos (`#`, `##`, `###`) para estruturar o conteúdo.
-- Prefira links internos relativos e sem extensão `.md`.
-- Utilize blocos de código com sintaxe destacada (ex: `js`, `bash`, `json`).
-- Adote tabelas para sumarizar parâmetros, respostas ou propriedades.
-- Use blocos de aviso (`:::tip`, `:::info`, `:::warning`, `:::danger`).
-- Inclua listas ordenadas e não ordenadas para organizar tópicos e etapas.
-- Sempre que possível, utilize imagens, diagramas ou fluxogramas (coloque arquivos em `docs/static/img`).
-- Sidebar manual em `sidebars.ts` para garantir ordem e navegação exata.
-- Estruture a documentação por seções e tópicos para facilitar a navegação.
-- Nunca crie exemplos, fluxos, endpoints ou integrações fictícios.
-- Sempre reflita o estado real do projeto.
+### 1. `apps/api` – Backend (NestJS)
 
+**Objetivo:** documentar rotas, lógica, serviços e testes da API.
 
 **Conteúdo obrigatório:**
 
-1. **Visão Geral**
-   - Propósito do backend e seu papel no monorepo.
-   - Arquitetura geral e principais decisões técnicas.
-2. **Guia de Uso**
-   - Como rodar o projeto em desenvolvimento.
-   - Variáveis de ambiente e configurações necessárias.
-   - Fluxos de autenticação e autorização (se aplicável).
-3. **Rotas e Endpoints**
-   - Listagem detalhada de todas as rotas/URLs disponíveis.
-   - Para cada rota: método HTTP, parâmetros, exemplos de request/response, status codes, explicação do propósito.
-4. **Lógica de Negócio**
-   - Descrição das principais regras de negócio implementadas.
-   - Fluxos importantes e como estão organizados no código.
-5. **Funções e Serviços Importantes**
-   - Documente funções, serviços e utilitários reutilizáveis.
-   - Explique quando e como utilizar cada um.
-6. **Exemplos de Uso**
-   - Exemplos práticos de consumo da API (curl, HTTPie, código JS/TS, etc).
-7. **Referências e Integrações**
-   - Integrações externas, dependências relevantes e pontos de extensão.
-8. **Testes End-to-End (e2e)**
-   - Explique a estrutura dos testes e2e presentes no projeto.
-   - Mostre como executar os testes e2e (comando, dependências, ambiente).
-   - Indique onde encontrar os arquivos de teste e exemplos de casos cobertos.
-   - Oriente sobre como criar novos testes e boas práticas para cobertura.
-9. **Frontend Web (apps/web)**
-   - Visão geral do frontend, propósito e tecnologias utilizadas (Next.js, integração com API, etc).
-   - Como rodar o frontend em desenvolvimento e produção.
-   - Estrutura de pastas e principais arquivos.
-   - Como consumir a API e exemplos de integração.
-   - Como utilizar componentes do pacote UI.
-   - Configuração de variáveis de ambiente e arquivos de configuração relevantes.
-   - Testes e boas práticas para frontend.
-   - Fluxos de autenticação/autorização (se aplicável).
-   - Como customizar estilos e usar o Tailwind.
-   - Dicas de performance, deploy e troubleshooting.
-   - Links para documentação de rotas, páginas e exemplos práticos.
-   - Como contribuir e padrões de código para o frontend.
-10. **Documentação de Componentes UI (packages/ui)**
-    - Visão geral do pacote de componentes compartilhados.
-    - Como importar e utilizar componentes do pacote UI no frontend.
-    - Lista de componentes disponíveis, props e exemplos de uso.
-    - Convenções de nomenclatura, estilos e integração com Tailwind.
-    - Como criar, documentar e testar novos componentes.
-    - Boas práticas para reutilização e manutenção dos componentes.
-    - Como contribuir para o pacote UI.
-    - Links para exemplos e documentação de referência.
-11. **Monorepo e Turborepo**
-    - Visão geral da arquitetura do monorepo e uso do Turborepo.
-    - Como instalar dependências, rodar build, dev e test globalmente.
-    - Estrutura de pastas e relação entre apps e packages.
-    - Como criar e rodar tasks customizadas com Turborepo.
-    - Comandos úteis do monorepo (pnpm, turbo, etc).
-    - Como funcionam as configurações globais: ESLint, Tailwind, TypeScript.
-    - Como adicionar novos apps/pacotes ao monorepo.
-    - Boas práticas de organização, versionamento e colaboração.
-    - Dicas de troubleshooting, cache e performance.
-    - Links para documentação oficial das ferramentas utilizadas.
-
-**Boas práticas:**
-
-- Use linguagem clara, objetiva e voltada ao público desenvolvedor.
-- Sempre que possível, inclua exemplos de código e fluxogramas.
-- Atualize a documentação sempre que houver mudanças relevantes na API.
+- **Visão geral do projeto** e sua arquitetura
+- **Guia de uso local** (instalação, variáveis, ambiente, dev)
+- **Rotas** (método, path, parâmetros, status, exemplos reais)
+- **Lógica de negócio** (regras principais e estrutura no código)
+- **Serviços e utilitários reutilizáveis**
+- **Testes E2E** (estrutura, exemplos, como rodar)
+- **Integrações externas e referências**
 
 ---
 
-> Estas instruções servem para orientar agentes de IA (ex: documentary-filmmaker) na geração de documentação técnica detalhada e útil para o time de desenvolvimento do monorepo.
+### 2. `apps/web` – Frontend (Next.js)
+
+**Objetivo:** documentar estrutura, consumo da API e boas práticas.
+
+**Conteúdo obrigatório:**
+
+- Visão geral e arquitetura do frontend
+- Como rodar localmente e em produção
+- Consumo da API e uso dos componentes do pacote UI
+- Autenticação/autorização (se aplicável)
+- Organização de arquivos e configuração do Tailwind
+- Boas práticas, testes, performance e troubleshooting
+
+---
+
+### 3. `packages/ui` – Biblioteca de Componentes
+
+**Objetivo:** documentar componentes compartilhados e como usá-los.
+
+**Conteúdo obrigatório:**
+
+- Como importar e utilizar componentes
+- Lista de componentes com props e exemplos
+- Estilo, padrão de nomenclatura e integração com Tailwind
+- Como criar e documentar novos componentes
+- Convenções e boas práticas
+
+---
+
+### 4. Monorepo e Turborepo
+
+**Objetivo:** explicar a arquitetura geral e o funcionamento do monorepo.
+
+**Conteúdo obrigatório:**
+
+- Estrutura de pastas e relação entre apps e packages
+- Comandos globais úteis (build, dev, test)
+- Configurações globais (TypeScript, Tailwind, ESLint etc)
+- Como criar novos apps/pacotes
+- Boas práticas de colaboração e performance
+
+---
+
+## 🧠 Boas Práticas Gerais
+
+- Escreva para desenvolvedores: foco na clareza, concisão e utilidade.
+- **Nunca documente o que não existe.**
+- Sempre que possível, use exemplos reais e fluxogramas.
+- Atualize sempre que houver mudanças relevantes no projeto.
+- Use linguagem técnica, mas acessível.
+- Mantenha consistência de formatação entre arquivos.
+
+---
+
+> Esta instrução é voltada a **agentes de IA e humanos**, e deve ser seguida em todos os processos de documentação. Toda geração automática ou semiautomática deve respeitar estas diretrizes sem exceção.
