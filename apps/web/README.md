@@ -1,3 +1,27 @@
+# Commits, Versionamento e Integrações
+
+Este projeto segue as convenções globais do monorepo para qualidade e automação:
+
+## Commits e Versionamento
+
+- Mensagens de commit validadas por **commitlint** (padrão Conventional Commits)
+- Hooks automáticos com **Husky** (`pre-commit`, `commit-msg`)
+- Versionamento e changelog automatizados com **Changeset**
+
+Exemplo de commit:
+
+```bash
+feat(web): adiciona nova página
+fix(web): corrige layout responsivo
+```
+
+## Integrações do GitHub
+
+- Pipelines automatizadas com **GitHub Actions** (lint, build, test)
+- Proteção de branch: PRs obrigatórios e status checks
+
+Consulte a [documentação do monorepo](../../docs/monorepo.md) para detalhes e fluxos completos.
+
 # Web
 
 Aplicação web construída com Next.js, responsável pela interface principal do usuário no monorepo.

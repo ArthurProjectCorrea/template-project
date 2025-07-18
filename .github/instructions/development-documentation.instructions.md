@@ -118,6 +118,10 @@ O agente de documentação deve seguir **sempre** as etapas abaixo, de forma **a
 - Configurações globais (TypeScript, Tailwind, ESLint etc)
 - Como criar novos apps/pacotes
 - Boas práticas de colaboração e performance
+- Configurações de commit (commitlint, convenções de mensagem, hooks do Husky)
+- Integrações e automações do GitHub (actions, PRs, branch protection)
+- Uso de Changeset para versionamento e changelog
+- Como o Husky está configurado e utilizado no repositório
 
 ---
 
