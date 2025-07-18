@@ -9,7 +9,8 @@
     "./react-internal": "./react-internal.js"
   },
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test:coverage": "echo 'No coverage for eslint-config'"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.0",

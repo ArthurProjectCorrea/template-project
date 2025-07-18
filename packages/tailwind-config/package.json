@@ -8,7 +8,8 @@
     "./postcss": "./postcss.config.js"
   },
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test:coverage": "echo 'No coverage for tailwind-config'"
   },
   "devDependencies": {
     "postcss": "^8.5.3",

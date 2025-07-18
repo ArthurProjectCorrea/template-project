@@ -172,3 +172,55 @@ pnpm dev
 ---
 
 Se tiver dúvidas, consulte este README ou abra um issue!
+
+---
+
+# Workflows Profissionais
+
+Este monorepo segue práticas modernas para garantir qualidade, rastreabilidade e automação:
+
+## CI/CD
+- Workflows automatizados com GitHub Actions: lint, testes, build e cobertura.
+- Deploy automático (ajuste o workflow conforme seu ambiente de produção/staging).
+
+## Commits Semânticos
+- Use Conventional Commits (ex: `feat(ui): novo componente`)
+- Commits validados automaticamente por commitlint (hook Husky)
+
+## Versionamento e Releases
+- Versionamento automatizado com [Changesets](https://github.com/changesets/changesets)
+- Changelog e publicação automatizados via workflow de release
+
+## Segurança
+- Dependabot para atualização de dependências vulneráveis
+- Branches protegidas: PR obrigatório para `main` e `dev`, CI precisa passar
+
+## Pull Requests
+- Checklist automático no template de PR
+- CI obrigatório para merge
+- Recomenda-se PRs pequenos e revisados por pelo menos 1 dev
+
+## Hooks de Git (Husky)
+- Lint automático antes do commit (`.husky/pre-commit`)
+- Commits validados por commitlint (`.husky/commit-msg`)
+
+### Como garantir que os hooks funcionem
+Se necessário, execute manualmente:
+```sh
+pnpm exec husky install
+```
+
+---
+
+## Comandos úteis para workflows
+
+- `pnpm lint` — Lint em todos os pacotes
+- `pnpm test` — Testes unitários
+- `pnpm test:coverage` — Cobertura de testes
+- `pnpm changeset` — Criar novo changeset
+- `pnpm changeset version` — Aplicar versões
+- `pnpm changeset publish` — Publicar pacotes
+
+---
+
+Consulte `.github/` para ver todos os workflows automatizados e templates.

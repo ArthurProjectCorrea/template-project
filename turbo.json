@@ -32,6 +32,7 @@
     "api#dev": {},
     "api#lint": {},
     "api#test": {},
+    "api#test:coverage": {},
     "docs#build": {
       "outputs": ["apps/docs/build/**"]
     },
@@ -46,6 +47,7 @@
     },
     "web#lint": {},
     "web#test": {},
+    "web#test:coverage": {},
     "ui#build:components": {
       "outputs": ["packages/ui/dist/**"]
     },
@@ -53,9 +55,26 @@
       "outputs": ["packages/ui/dist/index.css"]
     },
     "ui#test": {},
+    "ui#test:coverage": {},
     "ui#lint": {},
     "format": {
       "outputs": []
+    },
+    "check:workflow": {
+      "dependsOn": [
+        "web#lint",
+        "web#test",
+        "web#build",
+        "web#test:coverage",
+        "api#lint",
+        "api#test",
+        "api#build",
+        "api#test:coverage",
+        "@repo/ui#lint",
+        "@repo/ui#test",
+        "@repo/ui#build:components",
+        "@repo/ui#build:styles"
+      ]
     }
   },
   "globalDependencies": ["package.json", "pnpm-lock.yaml", "turbo.json"],

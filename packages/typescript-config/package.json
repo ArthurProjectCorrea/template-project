@@ -4,7 +4,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test:coverage": "echo 'No coverage for typescript-config'"
   },
   "publishConfig": {
     "access": "public"
