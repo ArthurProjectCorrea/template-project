@@ -37,5 +37,6 @@ pnpm test --filter web
 ```
 
 ## Boas práticas
+
 - Escreva testes para novos componentes e fluxos.
 - Mantenha cobertura adequada e revise testes ao alterar funcionalidades.

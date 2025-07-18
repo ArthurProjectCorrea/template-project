@@ -1,14 +1,15 @@
-
 # Uso e Ambiente
 
 ## Instalação
 
 1. Instale as dependências do monorepo:
+
    ```bash
    pnpm install
    ```
 
 2. Execute o frontend web:
+
    ```bash
    pnpm dev --filter web
    ```

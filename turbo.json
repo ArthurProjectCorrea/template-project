@@ -59,5 +59,6 @@
     }
   },
   "globalDependencies": ["package.json", "pnpm-lock.yaml", "turbo.json"],
-  "ui": "tui"
+  "ui": "tui",
+  "globalEnv": ["PORT"]
 }

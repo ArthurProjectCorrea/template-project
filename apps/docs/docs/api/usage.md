@@ -1,4 +1,3 @@
-
 # Guia de Uso
 
 ## Como rodar em desenvolvimento

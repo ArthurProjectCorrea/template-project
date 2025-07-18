@@ -13,7 +13,6 @@ Esta seção reúne toda a documentação técnica do backend do monorepo, desen
 - [Lógica de Negócio](business-logic)
 - [Funções e Serviços Importantes](services)
 - [Exemplos de Uso](examples)
-- [Integrações e Referências](integrations)
 
 Consulte os tópicos acima ou o menu lateral para detalhes sobre arquitetura, rotas, lógica de negócio, exemplos de uso e integrações.
 

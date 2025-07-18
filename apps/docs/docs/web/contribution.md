@@ -1,4 +1,3 @@
-
 # Contribuição
 
 Para contribuir com o frontend web:

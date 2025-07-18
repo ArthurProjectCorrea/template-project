@@ -49,11 +49,7 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Componentes UI",
       link: { type: "doc", id: "ui/index" },
-      items: [
-        "ui/index",
-        "ui/overview",
-        "ui/usage",
-      ],
+      items: ["ui/index", "ui/overview", "ui/usage"],
     },
     "monorepo",
   ],

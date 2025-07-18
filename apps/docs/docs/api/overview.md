@@ -1,4 +1,3 @@
-
 # Visão Geral
 
 A API é o backend do monorepo, construída com NestJS. Atualmente, implementa apenas um endpoint GET `/` que retorna uma mensagem fixa, servindo como base para futuras evoluções.

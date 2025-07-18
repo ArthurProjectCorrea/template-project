@@ -1,4 +1,3 @@
-
 # Frontend Web (apps/web)
 
 Esta seção documenta o frontend do monorepo, desenvolvido em Next.js (React 19), com foco em UI compartilhada, estrutura modular e exemplos reais do projeto.

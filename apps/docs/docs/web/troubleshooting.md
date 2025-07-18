@@ -1,4 +1,3 @@
-
 # Troubleshooting e Performance
 
 ## Problemas comuns

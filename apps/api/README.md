@@ -1,4 +1,3 @@
-
 # API
 
 Serviço backend desenvolvido com NestJS, responsável por fornecer o endpoint principal do sistema.
