@@ -27,5 +27,9 @@ jobs:
         run: pnpm test
       - name: Build
         run: pnpm build
+      - name: List @repo/ui build outputs
+        run: |
+          ls -lR node_modules/@repo/ui/dist || echo 'dist não encontrado'
+          ls -lR packages/ui/dist || echo 'dist local não encontrado'
       - name: Coverage
         run: pnpm test:coverage || echo 'No coverage script'
