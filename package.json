@@ -16,6 +16,8 @@
     "check:workflow": "turbo run check:workflow",
     "test": "turbo run test",
     "test:coverage": "turbo run test:coverage"
+    ,
+    "start-setup": "powershell -ExecutionPolicy Bypass -File ./scripts/init-template-project.ps1"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.5",
