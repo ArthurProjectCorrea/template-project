@@ -18,6 +18,7 @@
     "test:coverage": "turbo run test:coverage"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.5",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "changesets": "^1.0.2",
