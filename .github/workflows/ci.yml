@@ -19,6 +19,8 @@ jobs:
         uses: pnpm/action-setup@v3
         with:
           version: 8
+      - name: Clean pnpm store (cache)
+        run: pnpm store prune || echo 'pnpm store prune não disponível'
       - name: Install dependencies
         run: pnpm install
       - name: Lint
