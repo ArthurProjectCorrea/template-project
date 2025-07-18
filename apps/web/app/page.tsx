@@ -1,4 +1,4 @@
-import { Card } from "@repo/ui/card";
+import { Card } from "@repo/ui";
 import Image from "next/image";
 
 const LINKS = [
