@@ -45,13 +45,22 @@ git commit --amend -m "$commitMsg" --allow-empty
 git push --force
 
 # 6. Cria e sobe a branch dev (se não existir)
-$branchExists = git branch --list dev
-if (-not $branchExists) {
-    git checkout -b dev
-    Write-Host "Branch dev criada."
-    git push -u origin dev
+
+# Garante que a branch dev existe local e remotamente
+$localBranchExists = git branch --list dev
+$remoteBranchExists = git ls-remote --heads origin dev
+if (-not $localBranchExists) {
+    if (-not $remoteBranchExists) {
+        git checkout -b dev
+        Write-Host "Branch dev criada localmente."
+        git push -u origin dev
+        Write-Host "Branch dev enviada para o remoto."
+    } else {
+        git checkout -b dev origin/dev
+        Write-Host "Branch dev criada localmente a partir do remoto."
+    }
 } else {
-    Write-Host "A branch dev já existe. Pulando criação."
+    Write-Host "A branch dev já existe localmente. Pulando criação."
     git checkout dev
 }
 
@@ -60,35 +69,19 @@ Write-Host "Configurando proteção das branches main e dev..."
 
 function Protect-Branch($branch, $isProd) {
     $url = "https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/branches/$branch/protection"
-    if ($isProd) {
-        $body = @{
-            required_status_checks = @{
-                strict = $true
-                contexts = @()
-            }
-            enforce_admins = $true
-            required_pull_request_reviews = @{
-                required_approving_review_count = 2
-                dismiss_stale_reviews = $true
-                require_code_owner_reviews = $true
-            }
-            restrictions = $null
-        } | ConvertTo-Json -Depth 5
-    } else {
-        $body = @{
-            required_status_checks = @{
-                strict = $true
-                contexts = @()
-            }
-            enforce_admins = $false
-            required_pull_request_reviews = @{
-                required_approving_review_count = 1
-                dismiss_stale_reviews = $false
-                require_code_owner_reviews = $false
-            }
-            restrictions = $null
-        } | ConvertTo-Json -Depth 5
-    }
+    $body = @{
+        required_status_checks = @{
+            strict = $true
+            contexts = @()
+        }
+        enforce_admins = $false
+        required_pull_request_reviews = @{
+            required_approving_review_count = 1
+            dismiss_stale_reviews = $false
+            require_code_owner_reviews = $false
+        }
+        restrictions = $null
+    } | ConvertTo-Json -Depth 5
     try {
         Invoke-RestMethod -Uri $url -Method Put -Headers $headers -Body $body
         Write-Host "Proteção aplicada à branch $branch."
