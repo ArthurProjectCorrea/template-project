@@ -69,35 +69,19 @@ Write-Host "Configurando proteção das branches main e dev..."
 
 function Protect-Branch($branch, $isProd) {
     $url = "https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/branches/$branch/protection"
-    if ($isProd) {
-        $body = @{
-            required_status_checks = @{
-                strict = $true
-                contexts = @()
-            }
-            enforce_admins = $true
-            required_pull_request_reviews = @{
-                required_approving_review_count = 2
-                dismiss_stale_reviews = $true
-                require_code_owner_reviews = $true
-            }
-            restrictions = $null
-        } | ConvertTo-Json -Depth 5
-    } else {
-        $body = @{
-            required_status_checks = @{
-                strict = $true
-                contexts = @()
-            }
-            enforce_admins = $false
-            required_pull_request_reviews = @{
-                required_approving_review_count = 1
-                dismiss_stale_reviews = $false
-                require_code_owner_reviews = $false
-            }
-            restrictions = $null
-        } | ConvertTo-Json -Depth 5
-    }
+    $body = @{
+        required_status_checks = @{
+            strict = $true
+            contexts = @()
+        }
+        enforce_admins = $false
+        required_pull_request_reviews = @{
+            required_approving_review_count = 1
+            dismiss_stale_reviews = $false
+            require_code_owner_reviews = $false
+        }
+        restrictions = $null
+    } | ConvertTo-Json -Depth 5
     try {
         Invoke-RestMethod -Uri $url -Method Put -Headers $headers -Body $body
         Write-Host "Proteção aplicada à branch $branch."
