@@ -116,7 +116,7 @@ importers:
         version: 9.5.2(typescript@5.8.3)(webpack@5.100.2)
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@swc/core@1.12.14)(@types/node@22.15.30)(typescript@5.8.3)
+        version: 10.9.2(@swc/core@1.13.1)(@types/node@22.15.30)(typescript@5.8.3)
       tsconfig-paths:
         specifier: ^4.2.0
         version: 4.2.0
@@ -11788,7 +11788,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.2(@swc/core@1.12.14)(@types/node@22.15.30)(typescript@5.8.3)
+      ts-node: 10.9.2(@swc/core@1.13.1)(@types/node@22.15.30)(typescript@5.8.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -17077,10 +17077,10 @@ packages:
       semver: 7.7.2
       source-map: 0.7.4
       typescript: 5.8.3
-      webpack: 5.100.2(@swc/core@1.12.14)
+      webpack: 5.100.2(@swc/core@1.13.1)
     dev: true
 
-  /ts-node@10.9.2(@swc/core@1.12.14)(@types/node@22.15.30)(typescript@5.8.3):
+  /ts-node@10.9.2(@swc/core@1.13.1)(@types/node@22.15.30)(typescript@5.8.3):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
