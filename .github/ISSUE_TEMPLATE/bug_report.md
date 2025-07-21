@@ -1,7 +1,11 @@
+
+---
 name: Bug Report
 about: Reportar um bug no projeto
+title: "[BUG] "
 labels: bug
 assignees: ArthurProjectCorrea
+---
 
 
 **Descreva o bug**
