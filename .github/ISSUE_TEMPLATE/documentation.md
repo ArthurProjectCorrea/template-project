@@ -1,10 +1,21 @@
----
 name: "📝 Documentação"
 description: Solicite melhorias, correções ou adições na documentação do projeto
 labels: [documentation]
 ---
+name: Documentação
+about: Solicitar melhoria ou correção na documentação
+labels: documentation
+assignees: ArthurProjectCorrea
+---
+
+**Descreva o que precisa ser documentado ou corrigido**
+
+**Contexto adicional**
+
 
 ## 📄 Seção ou arquivo a ser alterado
+
+Informe o **local exato** onde a alteração será feita (ex: `README.md`, `docs/api/auth.mdx`, etc).
 
 Informe o **local exato** onde a alteração será feita (ex: `README.md`, `docs/api/auth.mdx`, etc).
 

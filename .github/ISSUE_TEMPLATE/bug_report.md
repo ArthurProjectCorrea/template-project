@@ -1,32 +1,16 @@
----
-name: "🐞 Bug Report"
-description: Relate um erro ou comportamento inesperado no projeto
-labels: [bug]
----
+name: Bug Report
+about: Reportar um bug no projeto
+labels: bug
+assignees: ArthurProjectCorrea
 
-## 🐛 Descrição do problema
 
-Descreva **claramente** o bug encontrado. Inclua o contexto onde ocorreu e o comportamento inesperado observado.
+**Descreva o bug**
 
-> Exemplo: "Ao tentar fazer login, o sistema retorna erro 500 mesmo com credenciais válidas."
+**Como reproduzir**
 
----
+**Comportamento esperado**
 
-## 🔁 Passos para reproduzir
-
-Liste os passos necessários para reproduzir o bug de forma consistente:
-
-1. Acesse `...`
-2. Clique em `...`
-3. Observe que `...`
-
----
-
-## ✅ Comportamento esperado
-
-Explique o que deveria acontecer **se o sistema estivesse funcionando corretamente**.
-
-> Exemplo: "O usuário deveria ser redirecionado para o dashboard após o login."
+**Informações adicionais**
 
 ---
 
