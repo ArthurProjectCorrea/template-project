@@ -1,31 +1,62 @@
 ---
 name: "✨ Feature Request"
-description: Sugira uma nova funcionalidade ou melhoria
+description: Sugira uma nova funcionalidade ou melhoria para o projeto
 labels: [enhancement]
 ---
 
-## Descrição da funcionalidade
-Explique claramente a feature ou melhoria desejada.
+## ✨ Descrição da funcionalidade
 
-## Justificativa
-Por que essa funcionalidade é importante? Quais problemas resolve?
+Descreva **claramente** a nova funcionalidade ou melhoria proposta. Seja objetivo e específico quanto ao que deve ser implementado.
 
-## Critérios de aceitação
-- [ ] Critério 1
-- [ ] Critério 2
-- [ ] Critério 3
+> Exemplo: "Permitir que usuários redefinam sua senha via e-mail com token de verificação."
 
-## Alternativas consideradas
-Liste outras soluções ou abordagens avaliadas.
+---
 
-## Nome da branch sugerida
-Informe o nome da branch a ser criada para esta issue, seguindo o padrão:
-`feature/<issue-id>-descricao-curta`
+## 📌 Justificativa
 
-Exemplo: `feature/42-add-user-auth`
+Explique o **motivo da solicitação**. Qual problema será resolvido? Qual valor essa funcionalidade agrega?
 
-## Checklist
-- [ ] Verifiquei se já existe uma issue aberta para esta funcionalidade
-- [ ] Descrevi claramente a proposta e os critérios de aceitação
-- [ ] Considerei possíveis impactos na arquitetura e integração
-- [ ] Sugeri um nome de branch conforme o padrão
+> Exemplo: "Sem uma funcionalidade de recuperação de senha, usuários que esquecerem suas credenciais não conseguem acessar o sistema."
+
+---
+
+## ✅ Critérios de aceitação
+
+Liste os critérios objetivos que definem o sucesso da entrega:
+
+- [ ] Comportamento esperado implementado
+- [ ] Cobertura de testes automatizados adequada
+- [ ] Documentação da funcionalidade incluída
+
+> Dica: utilize critérios técnicos e de UX, se aplicável.
+
+---
+
+## 🔁 Alternativas consideradas
+
+Liste outras abordagens avaliadas (mesmo que descartadas) com uma justificativa breve.
+
+> Exemplo: "Consideramos autenticação por SMS, mas optamos por e-mail devido ao menor custo."
+
+---
+
+## 🧩 Nome da branch sugerida
+
+Use o padrão:
+`feat/<issue-id>-descricao-curta`
+
+> Exemplo: `feat/42-reset-user-password`
+
+---
+
+## 📋 Checklist
+
+- [ ] Verifiquei se já existe uma issue semelhante aberta
+- [ ] Descrevi a proposta de forma clara e completa
+- [ ] Listei critérios de aceitação **incluindo implementação, testes e documentação**
+- [ ] Avaliei impactos na arquitetura, integração e experiência do usuário
+- [ ] Sugeri um nome de branch conforme o padrão estabelecido
+
+---
+
+> Esta issue só será considerada completa após a **implantação da funcionalidade**, a **criação de testes automatizados** e a **documentação adequada** (README, doc técnica ou interface, conforme aplicável).

@@ -1,32 +1,59 @@
 ---
 name: "🚀 Implantação/DevOps"
-description: Solicite melhorias, automações ou relate problemas relacionados a deploy, CI/CD ou infraestrutura
+description: Solicite melhorias, automações ou relate problemas relacionados a CI/CD, deploy ou infraestrutura
 labels: [devops, deployment]
 ---
 
-## Tipo de solicitação
-- [ ] Pipeline CI/CD
-- [ ] Configuração de ambiente
-- [ ] Infraestrutura
-- [ ] Outro (especifique)
+## ⚙️ Tipo de solicitação
 
-## Descrição detalhada
-Explique o contexto, objetivo e detalhes técnicos da solicitação.
+Selecione a opção mais adequada:
 
-## Boas práticas e requisitos
+- [ ] Pipeline CI/CD (ex: GitHub Actions, vercel.json, etc.)
+- [ ] Configuração de ambiente (ex: `.env`, staging, produção)
+- [ ] Infraestrutura (ex: Docker, banco, storage, Cloud)
+- [ ] Outro (especifique abaixo)
+
+> Caso "Outro", especifique: `...`
+
+---
+
+## 📝 Descrição detalhada
+
+Explique o **contexto**, o **objetivo** da solicitação e os **detalhes técnicos** necessários para a execução. Seja direto e forneça o máximo de informações úteis.
+
+> Exemplo: "Atualizar pipeline de deploy para executar testes antes do build e enviar artefatos apenas se passarem."
+
+---
+
+## 🛡️ Boas práticas e requisitos esperados
+
+Marque os itens que devem ser considerados na implementação:
+
 - [ ] Segue padrões de segurança e compliance
-- [ ] Documentação de rollback e monitoramento
-- [ ] Testes automatizados previstos
-- [ ] Integração com ferramentas existentes
+- [ ] Documentação de rollback e monitoramento incluída
+- [ ] Testes automatizados previstos ou existentes
+- [ ] Integra com ferramentas e fluxos já utilizados no projeto
 
-## Nome da branch sugerida
-Informe o nome da branch a ser criada para esta issue, seguindo o padrão:
-`chore/<issue-id>-descricao-curta` ou `devops/<issue-id>-descricao-curta`
+---
 
-Exemplo: `devops/150-update-pipeline`
+## 🌿 Nome da branch sugerida
 
-## Checklist
+Use um dos padrões:
+
+- `devops/<issue-id>-descricao-curta`
+- `chore/<issue-id>-descricao-curta`
+
+> Exemplo: `devops/150-update-cicd-pipeline`
+
+---
+
+## ✅ Checklist final
+
 - [ ] Verifiquei se já existe uma issue semelhante
-- [ ] Detalhei claramente a necessidade e os requisitos
-- [ ] Considerei impactos em outros ambientes/sistemas
-- [ ] Sugeri um nome de branch conforme o padrão
+- [ ] Detalhei claramente a necessidade e os requisitos técnicos
+- [ ] Considerei impactos em ambientes ou sistemas relacionados
+- [ ] Sugeri um nome de branch conforme o padrão do projeto
+
+---
+
+> Este template garante que ajustes de infraestrutura, automações e processos de deploy sejam planejados com clareza e executados com segurança.

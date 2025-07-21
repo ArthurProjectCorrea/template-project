@@ -1,38 +1,81 @@
 ---
 name: "🐞 Bug Report"
-description: Relate um bug encontrado no projeto
+description: Relate um erro ou comportamento inesperado no projeto
 labels: [bug]
 ---
 
-## Descrição do problema
-Descreva claramente o problema encontrado.
+## 🐛 Descrição do problema
 
-## Passos para reproduzir
-1. 
-2. 
-3. 
+Descreva **claramente** o bug encontrado. Inclua o contexto onde ocorreu e o comportamento inesperado observado.
 
-## Comportamento esperado
-Descreva o que deveria acontecer.
+> Exemplo: "Ao tentar fazer login, o sistema retorna erro 500 mesmo com credenciais válidas."
 
-## Evidências (prints, logs, etc)
-Adicione capturas de tela, logs ou outros arquivos relevantes.
+---
 
-## Ambiente
+## 🔁 Passos para reproduzir
 
-- Sistema operacional:
-- Navegador/Versão:
-- Versão do Node.js:
-- Outros detalhes relevantes:
+Liste os passos necessários para reproduzir o bug de forma consistente:
 
-## Nome da branch sugerida
-Informe o nome da branch a ser criada para esta issue, seguindo o padrão:
+1. Acesse `...`
+2. Clique em `...`
+3. Observe que `...`
+
+---
+
+## ✅ Comportamento esperado
+
+Explique o que deveria acontecer **se o sistema estivesse funcionando corretamente**.
+
+> Exemplo: "O usuário deveria ser redirecionado para o dashboard após o login."
+
+---
+
+## 📎 Evidências
+
+Anexe **prints de tela, logs, stack traces ou vídeos** que ajudem a entender o erro.
+
+> Exemplo: Console do navegador, logs do servidor, resposta da API.
+
+---
+
+## 💻 Ambiente
+
+Preencha com os detalhes técnicos do ambiente em que o bug ocorreu:
+
+- Sistema operacional: (ex: Windows 11, macOS Ventura)
+- Navegador e versão: (ex: Chrome 115.0.0)
+- Node.js: (ex: v20.11.0)
+- Outros detalhes relevantes: (ex: banco, rede, API externa)
+
+---
+
+## 🚦 Severidade e impacto
+
+Classifique a gravidade do bug e o impacto no sistema:
+
+- [ ] Crítico – afeta uso principal, sem alternativa
+- [ ] Alto – impacta funcionalidade importante
+- [ ] Médio – erro com alternativa viável
+- [ ] Baixo – problema visual ou secundário
+
+---
+
+## 🌿 Nome da branch sugerida
+
+Siga o padrão:
 `fix/<issue-id>-descricao-curta`
 
-Exemplo: `fix/105-correct-login-error`
+> Exemplo: `fix/105-correct-login-error`
 
-## Checklist
+---
+
+## ✅ Checklist
+
 - [ ] Verifiquei se já existe uma issue aberta para este problema
 - [ ] Preenchi todas as informações obrigatórias
-- [ ] Incluí evidências suficientes para análise
-- [ ] Sugeri um nome de branch conforme o padrão
+- [ ] Incluí evidências suficientes para facilitar a análise
+- [ ] Sugeri um nome de branch conforme o padrão do projeto
+
+---
+
+> Este template ajuda a garantir que bugs sejam reportados com clareza e contexto suficientes para rápida triagem e correção.
