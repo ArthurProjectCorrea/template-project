@@ -1,0 +1,91 @@
+name: "🐞 Bug Report"
+description: Reportar um bug no projeto
+title: "[BUG] "
+labels: [bug]
+assignees: [ArthurProjectCorrea]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Descreva o bug
+      description: Explique claramente o que está errado.
+      placeholder: "Ex: Ao tentar logar, o sistema retorna erro 500."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir
+      description: Liste os passos para reproduzir o erro.
+      placeholder: |
+        1. Vá para a página de login
+        2. Insira e-mail e senha válidos
+        3. Clique em "Entrar"
+        4. Observe o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+      description: O que deveria acontecer se o sistema funcionasse corretamente?
+      placeholder: "Ex: O sistema deveria redirecionar o usuário para a dashboard."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informações adicionais
+      description: Algum detalhe extra, hipótese ou comportamento estranho que tenha percebido?
+      placeholder: "Ex: O erro ocorre apenas em produção."
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 📎 Evidências
+      description: Anexe prints de tela, logs, stack traces ou vídeos que ajudem a entender o erro.
+      placeholder: "Ex: Stack trace da API, print do console do navegador..."
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 💻 Ambiente
+      description: Informe os dados técnicos do ambiente onde o bug ocorreu.
+      placeholder: |
+        - Sistema operacional: (ex: Windows 11)
+        - Navegador e versão: (ex: Chrome 115.0.0)
+        - Node.js: (ex: v20.11.0)
+        - Outros detalhes: (ex: rede, API externa, DB)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: severity
+    attributes:
+      label: 🚦 Severidade e impacto
+      description: Classifique a gravidade do bug.
+      options:
+        - label: Crítico – afeta uso principal, sem alternativa
+        - label: Alto – impacta funcionalidade importante
+        - label: Médio – erro com alternativa viável
+        - label: Baixo – problema visual ou secundário
+
+  - type: input
+    id: branch
+    attributes:
+      label: 🌿 Nome da branch sugerida
+      description: Siga o padrão `fix/<issue-id>-descricao-curta`
+      placeholder: "Ex: fix/105-correct-login-error"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Checklist
+      options:
+        - label: Verifiquei se já existe uma issue aberta para este problema
+        - label: Preenchi todas as informações obrigatórias
+        - label: Incluí evidências suficientes para facilitar a análise
+        - label: Sugeri um nome de branch conforme o padrão do projeto

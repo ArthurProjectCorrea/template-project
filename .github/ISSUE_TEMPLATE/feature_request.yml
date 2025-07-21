@@ -1,0 +1,63 @@
+name: "✨ Feature Request"
+description: Sugira uma nova funcionalidade ou melhoria para o projeto
+title: "[FEATURE] "
+labels: [enhancement]
+assignees: ArthurProjectCorrea
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Descrição da funcionalidade
+        
+        Descreva **claramente** a nova funcionalidade ou melhoria proposta. Seja objetivo e específico quanto ao que deve ser implementado.
+
+        > Exemplo: "Permitir que usuários redefinam sua senha via e-mail com token de verificação."
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição da funcionalidade
+      placeholder: "Explique o que deve ser implementado..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: 📌 Justificativa
+      description: Explique o motivo da solicitação. Qual problema será resolvido? Qual valor essa funcionalidade agrega?
+      placeholder: "Ex: Sem essa funcionalidade, usuários não conseguem redefinir senha."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: ✅ Critérios de aceitação
+      description: Liste os critérios objetivos que definem o sucesso da entrega.
+      options:
+        - label: Comportamento esperado implementado
+        - label: Cobertura de testes automatizados adequada
+        - label: Documentação da funcionalidade incluída
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔁 Alternativas consideradas
+      description: Liste outras abordagens avaliadas (mesmo que descartadas) com uma justificativa breve.
+      placeholder: "Ex: Consideramos autenticação por SMS, mas optamos por e-mail devido ao menor custo."
+
+  - type: input
+    id: branch
+    attributes:
+      label: 🧩 Nome da branch sugerida
+      placeholder: "feat/42-reset-user-password"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 📋 Checklist
+      options:
+        - label: Descrevi a proposta de forma clara e completa
+        - label: Listei critérios de aceitação incluindo implementação, testes e documentação
+        - label: Avaliei impactos na arquitetura, integração e experiência do usuário

@@ -1,0 +1,54 @@
+name: "📝 Documentação"
+description: Solicite melhorias, correções ou adições na documentação do projeto
+title: "[DOCS] "
+labels: [documentation]
+assignees: [ArthurProjectCorrea]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Preencha os campos abaixo para solicitar melhorias ou correções na documentação. Seja claro e específico para facilitar a implementação.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: ✏️ Descrição da melhoria
+      description: O que precisa ser adicionado, corrigido ou atualizado?
+      placeholder: "Ex: Corrigir exemplos de uso da API de login que estão desatualizados."
+    validations:
+      required: true
+
+  - type: input
+    id: section
+    attributes:
+      label: 📄 Seção ou arquivo a ser alterado
+      description: Informe o local exato do arquivo/documentação a ser alterado.
+      placeholder: "Ex: docs/api/auth.mdx"
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: 💡 Justificativa
+      description: Por que essa alteração é necessária? Corrige um erro? Melhora a clareza? Evita confusões futuras?
+      placeholder: "Ex: A documentação atual induz ao erro ao usar um endpoint que foi renomeado."
+    validations:
+      required: true
+
+  - type: input
+    id: branch
+    attributes:
+      label: 🌿 Nome da branch sugerida
+      description: Siga o padrão `docs/<issue-id>-descricao-curta`.
+      placeholder: "Ex: docs/88-update-auth-docs"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Checklist
+      options:
+        - label: Verifiquei se já existe uma issue aberta para esta sugestão
+        - label: Especifiquei claramente a melhoria ou correção necessária
+        - label: Avaliei o impacto da alteração para outros usuários/contribuidores
+        - label: Sugeri um nome de branch conforme o padrão estabelecido

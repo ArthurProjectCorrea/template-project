@@ -1,0 +1,76 @@
+name: "🚀 Deploy/Infraestrutura"
+description: Relatar problemas ou solicitar melhorias relacionadas a deploy ou infraestrutura
+title: "[DEPLOY] "
+labels: [infra]
+assignees: [ArthurProjectCorrea]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Descreva o problema ou solicitação
+      description: Seja claro e direto quanto ao que precisa ser ajustado ou implementado.
+      placeholder: "Ex: Pipeline do GitHub Actions falhando ao subir para produção."
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Especifique o ambiente afetado ou alvo da alteração.
+      placeholder: "Ex: produção, staging, desenvolvimento"
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Informações adicionais
+      description: Forneça logs, prints, mensagens de erro ou outras informações que ajudem a entender a situação.
+
+  - type: checkboxes
+    id: type
+    attributes:
+      label: ⚙️ Tipo de solicitação
+      description: Selecione a opção mais adequada
+      options:
+        - label: Pipeline CI/CD (ex: GitHub Actions, vercel.json, etc.)
+        - label: Configuração de ambiente (ex: `.env`, staging, produção)
+        - label: Infraestrutura (ex: Docker, banco, storage, Cloud)
+        - label: Outro (especifique abaixo)
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Descrição detalhada
+      description: Explique o contexto, objetivo da solicitação e os detalhes técnicos necessários para a execução.
+      placeholder: "Ex: Atualizar pipeline para executar testes antes do build e enviar artefatos apenas se passarem."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: practices
+    attributes:
+      label: 🛡️ Boas práticas e requisitos esperados
+      options:
+        - label: Segue padrões de segurança e compliance
+        - label: Documentação de rollback e monitoramento incluída
+        - label: Testes automatizados previstos ou existentes
+        - label: Integra com ferramentas e fluxos já utilizados no projeto
+
+  - type: input
+    id: branch
+    attributes:
+      label: 🌿 Nome da branch sugerida
+      description: Use o padrão `devops/<issue-id>-descricao-curta` ou `chore/<issue-id>-descricao-curta`
+      placeholder: "Ex: devops/150-update-cicd-pipeline"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Checklist final
+      options:
+        - label: Verifiquei se já existe uma issue semelhante
+        - label: Detalhei claramente a necessidade e os requisitos técnicos
+        - label: Considerei impactos em ambientes ou sistemas relacionados
+        - label: Sugeri um nome de branch conforme o padrão do projeto
