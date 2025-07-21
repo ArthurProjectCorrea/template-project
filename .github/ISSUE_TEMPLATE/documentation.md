@@ -1,26 +1,47 @@
 ---
 name: "📝 Documentação"
-description: Solicite melhorias ou correções na documentação
+description: Solicite melhorias, correções ou adições na documentação do projeto
 labels: [documentation]
 ---
 
-## Seção/documento a ser alterado
-Indique o local exato da documentação.
+## 📄 Seção ou arquivo a ser alterado
 
-## Descrição da melhoria
-Explique o que deve ser alterado, removido ou adicionado.
+Informe o **local exato** onde a alteração será feita (ex: `README.md`, `docs/api/auth.mdx`, etc).
 
-## Justificativa
-Por que essa alteração é necessária?
+---
 
-## Nome da branch sugerida
-Informe o nome da branch a ser criada para esta issue, seguindo o padrão:
+## ✏️ Descrição da melhoria
+
+Explique **objetivamente** o que deve ser **adicionado, removido ou alterado** na documentação.
+
+> Exemplo: "Corrigir exemplos de uso da API de login que estão desatualizados."
+
+---
+
+## 💡 Justificativa
+
+Descreva **por que** a alteração é importante. Ela corrige algo errado? Melhora a compreensão? Evita confusão?
+
+> Exemplo: "A documentação atual induz ao erro ao usar um endpoint que foi renomeado."
+
+---
+
+## 🌿 Nome da branch sugerida
+
+Use o padrão:
 `docs/<issue-id>-descricao-curta`
 
-Exemplo: `docs/88-update-readme`
+> Exemplo: `docs/88-update-auth-docs`
 
-## Checklist
-- [ ] Verifiquei se já existe uma issue aberta para este tópico
-- [ ] Detalhei claramente a necessidade de alteração
-- [ ] Considerei o impacto para outros usuários/contribuidores
-- [ ] Sugeri um nome de branch conforme o padrão
+---
+
+## ✅ Checklist
+
+- [ ] Verifiquei se já existe uma issue aberta para esta sugestão
+- [ ] Especifiquei claramente a melhoria ou correção necessária
+- [ ] Avaliei o impacto da alteração para outros usuários/contribuidores
+- [ ] Sugeri um nome de branch conforme o padrão estabelecido
+
+---
+
+> Este template garante que as solicitações de documentação sejam claras, rastreáveis e consistentes com as práticas do repositório.
