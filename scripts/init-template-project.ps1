@@ -45,13 +45,22 @@ git commit --amend -m "$commitMsg" --allow-empty
 git push --force
 
 # 6. Cria e sobe a branch dev (se não existir)
-$branchExists = git branch --list dev
-if (-not $branchExists) {
-    git checkout -b dev
-    Write-Host "Branch dev criada."
-    git push -u origin dev
+
+# Garante que a branch dev existe local e remotamente
+$localBranchExists = git branch --list dev
+$remoteBranchExists = git ls-remote --heads origin dev
+if (-not $localBranchExists) {
+    if (-not $remoteBranchExists) {
+        git checkout -b dev
+        Write-Host "Branch dev criada localmente."
+        git push -u origin dev
+        Write-Host "Branch dev enviada para o remoto."
+    } else {
+        git checkout -b dev origin/dev
+        Write-Host "Branch dev criada localmente a partir do remoto."
+    }
 } else {
-    Write-Host "A branch dev já existe. Pulando criação."
+    Write-Host "A branch dev já existe localmente. Pulando criação."
     git checkout dev
 }
 
