@@ -24,6 +24,7 @@ const sidebars: SidebarsConfig = {
         "api/overview",
         "api/usage",
         "api/routes",
+        "api/auth",
         "api/business-logic",
         "api/services",
         "api/examples",

@@ -18,11 +18,13 @@ curl -X POST http://localhost:3000/auth/profile -H "Authorization: Bearer <acces
 ```
 
 ## Fluxo
+
 1. Registro cria usuário em memória
 2. Login retorna JWT
 3. Profile retorna dados do usuário autenticado
 
 ## Observações
+
 - Usuários são mantidos em memória (exemplo)
 - Para produção, integre com banco de dados
 - O segredo JWT pode ser configurado via variável de ambiente `JWT_SECRET`
