@@ -34,10 +34,10 @@ body:
       label: ⚙️ Tipo de solicitação
       description: Selecione a opção mais adequada
       options:
-        - label: Pipeline CI/CD (ex: GitHub Actions, vercel.json, etc.)
-        - label: Configuração de ambiente (ex: `.env`, staging, produção)
-        - label: Infraestrutura (ex: Docker, banco, storage, Cloud)
-        - label: Outro (especifique abaixo)
+        - label: Pipeline CI/CD
+        - label: Configuração de ambiente
+        - label: Infraestrutura
+        - label: Outro
 
   - type: textarea
     id: description

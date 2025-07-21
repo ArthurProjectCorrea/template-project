@@ -24,8 +24,11 @@ pnpm test --filter api
 
 ## Exemplos de Casos Cobertos
 
-- Teste do endpoint GET `/` para resposta "Hello World!".
-- Validação de status HTTP e conteúdo da resposta.
+- Teste do endpoint GET `/` para resposta "Hello World!"
+- Teste de registro de usuário (`POST /auth/register`)
+- Teste de login e retorno do JWT (`POST /auth/login`)
+- Teste de acesso protegido (`POST /auth/profile` com Bearer Token)
+- Validação de status HTTP e conteúdo da resposta
 
 ## Como Criar Novos Testes
 
