@@ -1,12 +1,16 @@
 name: "📝 Documentação"
 description: Solicite melhorias, correções ou adições na documentação do projeto
 labels: [documentation]
----
 name: Documentação
 about: Solicitar melhoria ou correção na documentação
+title: "[DOCS] "
 labels: documentation
 assignees: ArthurProjectCorrea
 ---
+
+**Descreva o que precisa ser documentado ou corrigido**
+
+**Contexto adicional**
 
 **Descreva o que precisa ser documentado ou corrigido**
 

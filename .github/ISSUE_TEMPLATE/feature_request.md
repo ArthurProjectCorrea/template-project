@@ -4,12 +4,18 @@ description: Sugira uma nova funcionalidade ou melhoria para o projeto
 ---
 
 ## ✨ Descrição da funcionalidade
----
 name: Feature Request
-about: Sugerir uma nova funcionalidade ou melhoria
+about: Solicitar uma nova funcionalidade ou melhoria
+title: "[FEATURE] "
 labels: enhancement
 assignees: ArthurProjectCorrea
 ---
+
+**Descreva a feature**
+
+**Justificativa**
+
+**Contexto adicional**
 
 **Descreva a feature**
 

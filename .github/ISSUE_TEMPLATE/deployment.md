@@ -1,8 +1,15 @@
+name: Deploy/Infraestrutura
+about: Relatar problemas ou solicitar melhorias de deploy/infra
+title: "[DEPLOY] "
+labels: infra
+assignees: ArthurProjectCorrea
 ---
-name: "🚀 Implantação/DevOps"
-description: Solicite melhorias, automações ou relate problemas relacionados a CI/CD, deploy ou infraestrutura
-labels: [devops, deployment]
----
+
+**Descreva o problema ou solicitação**
+
+**Ambiente**
+
+**Informações adicionais**
 
 ## ⚙️ Tipo de solicitação
 
