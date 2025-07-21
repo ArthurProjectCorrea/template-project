@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         ## ✨ Descrição da funcionalidade
-        
+
         Descreva **claramente** a nova funcionalidade ou melhoria proposta. Seja objetivo e específico quanto ao que deve ser implementado.
 
         > Exemplo: "Permitir que usuários redefinam sua senha via e-mail com token de verificação."
